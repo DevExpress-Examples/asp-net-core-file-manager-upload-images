@@ -1,0 +1,69 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    .link {
+        display: block;
+        margin-bottom: 0.2em;
+    }
+
+    #imagesContainer {
+        border: 1px solid gray;
+        border-radius: 0.2em;
+        height: 15em;
+        width: 16em;
+    }
+</style>
+@Html.AntiForgeryToken()
+
+<script>
+    (function () {
+        var send = XMLHttpRequest.prototype.send;
+        XMLHttpRequest.prototype.send = function (data) {
+            data.append('__RequestVerificationToken', $('[name=__RequestVerificationToken]').val());
+            return send.apply(this, arguments);
+        };
+    }());
+
+    function OnUploaded(args) {
+        let imgUrl = JSON.parse(args.request.response).imgUrl;
+        let imgName = args.file.name;
+        let imagesContainer = document.getElementById("imagesContainer");
+        imagesContainer.appendChild(createLink(imgName, imgUrl));
+    }
+    function createLink(imgName, url) {
+        let link = document.createElement("A");
+        link.className += "link";
+        link.target = "_blank";
+        link.innerText = imgName;
+        link.href = url;
+        return link;
+    }
+</script>
+
+<div class="row">
+    <div class="col-6">
+        @(Html.DevExtreme().FileUploader()
+                            .ID("file-uploader")
+                            .Name("uploadedFile")
+                            .ChunkSize(200000)
+                            .Multiple(true)
+                            .AllowedFileExtensions(new[] { ".jpg", ".jpeg", ".gif", ".png" })
+                            .MaxFileSize(4000000)
+                            .OnUploaded("OnUploaded")
+                            .UploadMode(FileUploadMode.Instantly)
+                            .UploadUrl(Url.Page("Index", "FileUpload"))
+
+        )
+    </div>
+    <div class="col-6">
+        <div id="imagesContainer" >
+            <p class="text-center">Uploaded images:</>
+            <hr/>
+        </div>
+    </div>
+</div>
+
+
