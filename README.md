@@ -5,16 +5,15 @@
 <!-- default badges end -->
 # File Uploader - How to upload images in Razor Pages
 
-This example shows how to upload images in an ASP.NET Core Razor Pages application using DevExtreme FileUploader. The project also shows how to display links to uploaded images.
+This example shows how to use [DevExtreme FileUploader](https://js.devexpress.com/Documentation/Guide/UI_Components/FileUploader/) to upload images and display links to these images in an ASP.NET Core Razor Pages application. 
 
-*Files to look at*:
+## Files to look at:
 
 * [Index.cshtml](./CS/FileUploadRazorPages/Pages/Index.cshtml)
 * [Index.cshtml.cs](./CS/FileUploadRazorPages/Pages/Index.cshtml.cs)
 * [_Layout.cshtml](./CS/FileUploadRazorPages/Pages/_Layout.cshtml)
 
-
-## Implementation:
+## Implementation Details
 
 1) Add required libraries to your project: [Configure a Visual Studio Project](https://docs.devexpress.com/AspNetCore/401026/devextreme-based-controls/get-started/configure-a-visual-studio-project).
 > **Note** The project targets .NET Core 3.1. To run the project in Visual Studio 2017, change the target framework in the project settings.
@@ -70,4 +69,12 @@ function createLink(imgName, url) {
     }
 ```
 
+## Documentation
 
+[Upload Files: Server-Side Implementation in ASP.NET](https://js.devexpress.com/Documentation/Guide/UI_Components/FileUploader/Upload_Files/Server-Side_Implementation_in_ASP.NET/)
+
+## More Examples
+
+* [Angular File Uploader - How to upload images using ASP.NET Core API Controller](https://github.com/DevExpress-Examples/Angular-File-Uploader-How-to-upload-images-using-ASP.NET-Core-API-Controller)
+
+* [DataGrid - How to use FileUploader in an edit form](https://github.com/DevExpress-Examples/DataGrid---How-to-use-FileUploader-in-an-edit-form)
