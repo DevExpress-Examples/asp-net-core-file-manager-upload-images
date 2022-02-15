@@ -5,7 +5,8 @@
 <!-- default badges end -->
 # File Uploader - How to upload images in Razor Pages
 
-This example shows how to use [DevExtreme FileUploader](https://js.devexpress.com/Documentation/Guide/UI_Components/FileUploader/) to upload images and display links to these images in an ASP.NET Core Razor Pages application. 
+This example shows how to use the [DevExtreme FileUploader](https://js.devexpress.com/Documentation/Guide/UI_Components/FileUploader/) to upload images and display links for these images in an ASP.NET Core Razor Pages application. 
+
 
 ## Files to look at:
 
