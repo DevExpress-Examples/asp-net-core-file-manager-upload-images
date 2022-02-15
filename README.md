@@ -19,7 +19,7 @@ This example shows how to use [DevExtreme FileUploader](https://js.devexpress.co
 
 1) [Configure a Visual Studio Project](https://docs.devexpress.com/AspNetCore/401026/devextreme-based-controls/get-started/configure-a-visual-studio-project).
 
-2) Add [FileUploader](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder) component to your Razor Page. Specify its [Name](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.Name.overloads) and [UploadUrl](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.UploadUrl.overloads) properties.
+2) Add the [FileUploader](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder) component to your Razor Page. Specify its [Name](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.Name.overloads) and [UploadUrl](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.UploadUrl.overloads) properties.
 
     ```cs
     @(Html.DevExtreme().FileUploader()
@@ -28,9 +28,7 @@ This example shows how to use [DevExtreme FileUploader](https://js.devexpress.co
         .UploadUrl(Url.Page("Index", "FileUpload"))
     ```
 
-3) Use the 'POST' handler method and implement the [Chunk Upload](https://js.devexpress.com/Documentation/Guide/Widgets/FileUploader/Upload_Files/Server-Side_Implementation_in_ASP.NET/#Chunk_Upload) technique.  
-
-    > **Important** For Chunk or Ajax upload, make sure that **the first parameter** in your handler is the same as your **FileUploader.Name**
+3) Use the 'POST' handler method and implement the [Chunk Upload](https://js.devexpress.com/Documentation/Guide/Widgets/FileUploader/Upload_Files/Server-Side_Implementation_in_ASP.NET/#Chunk_Upload) technique.  For the chunk or Ajax upload, make sure that **the first parameter** in your handler equals the **FileUploader.Name** parameter value.
 
 4) Add the token value to the file uploader's requests because ASP.NET Core Razor Pages validate the [Antiforgery Token](https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery) in POST requests. 
 
@@ -44,7 +42,7 @@ This example shows how to use [DevExtreme FileUploader](https://js.devexpress.co
         }());
     ```
 
-5) (*Optional*) To obtain an uploaded image's URL, modify the 'ProcessUploadedFile' method so that it returns a relative path to your file. Return this URL from your handler method:
+5) (*Optional*) To obtain an uploaded image's URL, modify the 'ProcessUploadedFile' method so that it returns a relative path to your file. Return this URL from your handler method.
 
     ```cs
     string ProcessUploadedFile(string tempFilePath, string fileName) {
