@@ -29,7 +29,7 @@ This example shows how to use the [DevExtreme FileUploader](https://js.devexpres
         .UploadUrl(Url.Page("Index", "FileUpload"))
     ```
 
-3) Use the 'POST' handler method and implement the [Chunk Upload](https://js.devexpress.com/Documentation/Guide/Widgets/FileUploader/Upload_Files/Server-Side_Implementation_in_ASP.NET/#Chunk_Upload) technique.  For the chunk or Ajax upload, make sure that **the first parameter** in your handler equals the **FileUploader.Name** parameter value.
+3) Use the 'POST' handler method and implement the [Chunk Upload](https://js.devexpress.com/jQuery/Documentation/Guide/UI_Components/FileUploader/Upload_Files/Server-Side_Implementation_in_ASP.NET/#Chunk_Upload) technique.  For the chunk or Ajax upload, make sure that **the first parameter** in your handler equals the **FileUploader.Name** parameter value.
 
 4) Add the token value to the file uploader's requests because ASP.NET Core Razor Pages validate the [Antiforgery Token](https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery) in POST requests. 
 
