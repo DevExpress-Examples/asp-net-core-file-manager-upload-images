@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T848532)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# File Uploader - How to upload images in Razor Pages
+# File Uploader for ASP.NET Core - How to upload images
 
 This example shows how to use the [DevExtreme FileUploader](https://js.devexpress.com/Documentation/Guide/UI_Components/FileUploader/) to upload images and display links for these images in an ASP.NET Core Razor Pages application. 
 
