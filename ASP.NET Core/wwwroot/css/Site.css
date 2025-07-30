@@ -1,0 +1,19 @@
+.demo-container {
+    margin: 50px;
+    width: 90vw;
+}
+body {
+    margin: 8px;
+}
+
+.link {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+#imagesContainer {
+    border: 1px solid gray;
+    border-radius: 0.2em;
+    height: 15em;
+    width: 16em;
+}

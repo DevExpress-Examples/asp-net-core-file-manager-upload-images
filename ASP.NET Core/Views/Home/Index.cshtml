@@ -1,0 +1,52 @@
+@using ASP_NET_Core.Models
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@Html.AntiForgeryToken()
+
+<script>
+    function OnUploaded(args) {
+        let imgUrl = JSON.parse(args.request.response).imgUrl;
+        let imgName = args.file.name;
+        let imagesContainer = document.getElementById("imagesContainer");
+        imagesContainer.appendChild(createLink(imgName, imgUrl));
+    }
+
+    function OnUploadError(args) {
+         DevExpress.ui.notify("Error occurred during image upload", "error", 5000);
+    }
+
+    function createLink(imgName, url) {
+        let link = document.createElement("A");
+        link.className += "link";
+        link.target = "_blank";
+        link.innerText = imgName;
+        link.href = url;
+        return link;
+    }
+</script>
+
+<div class="row">
+    <div class="col-6">
+        @(Html.DevExtreme().FileUploader()
+            .ID("file-uploader")
+            .Name("uploadedFile")
+            .UploadCustomData(new JS("{__RequestVerificationToken: document.getElementsByName('__RequestVerificationToken')[0].value}"))
+            .ChunkSize(200000)
+            .Multiple(true)
+            .AllowedFileExtensions(new[] { ".jpg", ".jpeg", ".gif", ".png" })
+            .MaxFileSize(4000000)
+            .OnUploaded("OnUploaded")
+            .OnUploadError("OnUploadError")
+            .UploadMode(FileUploadMode.Instantly)
+            .UploadUrl(Url.Action("Upload", "FileUpload"))
+        )
+    </div>
+    <div class="col-6">
+        <div id="imagesContainer" >
+            <p class="text-center">Uploaded images:</p>
+            <hr/>
+        </div>
+    </div>
+</div>
