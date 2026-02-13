@@ -85,7 +85,7 @@ This example shows how to use the [DevExtreme FileUploader](https://js.devexpres
 
 * [DataGrid - How to use FileUploader in an edit form](https://github.com/DevExpress-Examples/DataGrid---How-to-use-FileUploader-in-an-edit-form)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-core-file-manager-upload-images&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-core-file-manager-upload-images&~~~was_helpful=no)
 
