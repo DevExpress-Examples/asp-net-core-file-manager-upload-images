@@ -6,10 +6,10 @@
 <!-- default badges end -->
 # File Uploader for ASP.NET Core - How to upload images
 
-This example shows how to use the [DevExtreme FileUploader](https://js.devexpress.com/Documentation/Guide/UI_Components/FileUploader/) to upload images and display links for these images in an ASP.NET Core MVC application with chunked upload support. 
+This example uses the [DevExtreme FileUploader](https://js.devexpress.com/Documentation/Guide/UI_Components/FileUploader/) to upload images and display links for these images in an ASP.NET Core MVC application with chunked upload support. 
 
 
-## Files to look at:
+## Files to Review
 
 * [Index.cshtml](./ASP.NET%20Core/Views/Home/Index.cshtml)
 * [FileUploadController.cs](./ASP.NET%20Core/Controllers/FileUploadController.cs)
@@ -18,7 +18,7 @@ This example shows how to use the [DevExtreme FileUploader](https://js.devexpres
 
 ## Implementation Details
 
-> **Note** The project targets .NET 8+ and uses modern ASP.NET Core MVC architecture with System.Text.Json for JSON serialization.
+> **Note** The project targets .NET 10+ and uses modern ASP.NET Core MVC architecture with System.Text.Json for JSON serialization.
 
 1) [Configure a Visual Studio Project](https://docs.devexpress.com/AspNetCore/401026/devextreme-based-controls/get-started/configure-a-visual-studio-project).
 
